@@ -28,7 +28,14 @@ const handleUserInput = function (input) {
   if(input === "d") {
     connection.write("Move: right");
   }
+
+  // if(input === "r") {
+  //   connection.write();  
+  // }
+
+  connection.write(`Say: ${input}`);
   console.log(input);
+  
 };
 const setupInput = function (conn) {
   connection = conn;
