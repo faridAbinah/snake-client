@@ -1,5 +1,5 @@
 
-const { Console } = require("console");
+
 const net = require("net");
 // establishes a connection with the game server
 //used createConnection function to create an object called conn
@@ -16,13 +16,19 @@ const connect = function () {
 
   
   conn.on("connect", () => {
-    console.log("I have connected");
+    console.log("Successfully connected to game server");
+    const name = "AB"
+    conn.write(`Name: ${name}`)
   });
 
   conn.on("data", (data) => {
     console.log("DATA CAME IN");
     console.log(data);
   })
+
+  
+
+  
 
   return conn;
 };
