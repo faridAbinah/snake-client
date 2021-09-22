@@ -19,11 +19,10 @@ const connect = function () {
     console.log("Successfully connected to game server");
     const name = "AB"
     conn.write('Name: AB')
+    // always use single quotes and not template literals
    // conn.write('Move: up');
 
-    setInterval(() => {
-      conn.write('Move: up');
-    },200);
+    
   });
 
   conn.on("data", (data) => {
